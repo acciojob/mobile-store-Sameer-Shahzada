@@ -18,11 +18,12 @@ function ProductList({ products }) {
                         <Link to={`/products/${item.id}`}>
                             <img src={item.image} alt={item.name} />
                             <h3>{item.name}</h3>
+                             <button className="btn">Buy</button>
                         </Link>
 
                         <p>Price: {item.price}</p>
 
-                        <button className="btn">Buy</button>
+                       
                     </div>
                 ))}
             </div>
