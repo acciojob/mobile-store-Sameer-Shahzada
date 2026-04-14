@@ -60,19 +60,20 @@ function AdminPanel({ products, setProducts }) {
             </div>
 
             <ul>
-                {products.map((p) => (
+                {products.length > 0 && (
                     <li key={p.id} className="product-item">
-                        <Link to={`/products/${p.id}`}>{p.name}</Link>
+                        <Link to={`/products/${products[0].id}`}>
+                            {products[0].name}
+                        </Link>
 
                         <button
                             className="float-right"
-                            // data-testid={`delete-${p.id}`}
-                            onClick={() => deleteProduct(p.id)}
+                            onClick={() => deleteProduct(products[0].id)}
                         >
-                            Delete {p.id}
+                            Delete
                         </button>
                     </li>
-                ))}
+                )}
             </ul>
         </div>
     );
