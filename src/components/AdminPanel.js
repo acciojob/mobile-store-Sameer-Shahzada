@@ -65,10 +65,11 @@ function AdminPanel({ products, setProducts }) {
                         <Link to={`/products/${p.id}`}>{p.name}</Link>
 
                         <button
-                            className="float-right delete-btn"
+                            className="float-right"
+                            // data-testid={`delete-${p.id}`}
                             onClick={() => deleteProduct(p.id)}
                         >
-                            Delete
+                            Delete {p.id}
                         </button>
                     </li>
                 ))}
