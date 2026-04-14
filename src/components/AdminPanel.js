@@ -61,11 +61,11 @@ function AdminPanel({ products, setProducts }) {
 
             <ul>
                 {products.map((p) => (
-                    <li key={p.id}>
+                    <li key={p.id} className="product-item">
                         <Link to={`/products/${p.id}`}>{p.name}</Link>
 
                         <button
-                            className="float-right"
+                            className="float-right delete-btn"
                             onClick={() => deleteProduct(p.id)}
                         >
                             Delete
